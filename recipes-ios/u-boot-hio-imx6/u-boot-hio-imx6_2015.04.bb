@@ -8,7 +8,7 @@ PROVIDES += "u-boot"
 
 #PV = "hio"
 
-SRC_URI = "git://github.com/HIO-Project/u-boot-imx6-hio.git;branch=2015.04"
+SRC_URI = "git://github.com/chausieu/u-boot-imx6-hio.git;branch=2015.04_3.14.52_1.1.0_ga"
 SRCREV = "${AUTOREV}"
 SCMVERSION = "n"
 

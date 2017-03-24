@@ -7,10 +7,10 @@ require recipes-kernel/linux/linux-dtb.inc
 
 SUMMARY = "Linux kernel for hio boards"
 
-SRC_URI = "git://github.com/chausieu/linux-imx6-hio.git  \
+SRC_URI = "git://github.com/chausieu/linux-imx6-hio.git;protocol=git;branch=3.14.52_1.1.0_ga \
            file://defconfig"
 
-LOCALVERSION = "-1.0.0_ga+yocto"
+LOCALVERSION = "-1.0.0_ga+yocto-jethro-2.0"
 SRCBRANCH = "master"
 
 #SRCREV = "0ef31c876c083ff97f96ccef90c84019b52771b2"
