@@ -15,22 +15,21 @@ IMAGE_INSTALL += "\
 	openssh-sftp-server \
 	kernel-modules \
 	usbutils \
-	packagegroup-fonts-trutype-core \
+	packagegroup-fonts-truetype-core \
 	ttf-ubuntu-mono \
 	ttf-ubuntu-sans \
-	hdparm
+	hdparm \
 	packagegroup-fsl-tools-benchmark \
-	packagegroup-fsl-gstreamer \
+	packagegroup-fsl-gstreamer1.0 \
 	packagegroup-fsl-tools-testapps \
 	packagegroup-fsl-tools-gpu \
-	gst-fsl-plugin \
+	imx-gst1.0-plugin \
 	alsa-lib \
 	alsa-tools \
 	alsa-state \
 	alsa-utils \
 	alsa-utils-scripts \
 	imx-alsa-plugins \
-	RDEPENDS_${PN} = " \
 	qtbase \
 	qtbase-plugins \
 	qtbase-tools \
@@ -53,7 +52,7 @@ IMAGE_INSTALL += "\
 	qtdeclarative-plugins \
 	qtwebengine \
 	qtwebengine-qmlplugins \
-	qtwebengine-plugins \
+	\
 	${QTWEBKIT} \
 	cinematicexperience \
 	i2c-tools \
