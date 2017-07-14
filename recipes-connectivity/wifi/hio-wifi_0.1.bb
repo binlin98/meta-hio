@@ -1,7 +1,3 @@
-#
-# This file was derived from the 'Hello World!' example recipe in the
-# Yocto Project Development Manual.
-#
 
 DESCRIPTION = "Simple helloworld application"
 SECTION = "hio-wifi"
@@ -12,16 +8,13 @@ PR = "r0"
 SRC_URI = "file://cfg80211.ko         \
            file://wlan0_up.sh         \
            file://wlan.ko             \
-           file://wpa_supplicant.conf"
+           file://wpa_supplicant.conf \
+	   file://rtl8188eufw.bin "
 
 S = "${WORKDIR}"
 
 INSANE_SKIP_${PN} = "installed-vs-shipped"
 FILES_${PN} += " /usr/share/wifi"
-
-#do_compile() {
-#	     #${CC} helloworld.c -o helloworld
-#}
 
 do_install() {
              echo "------------------------"
@@ -29,8 +22,10 @@ do_install() {
 
 	    #wifi
 	    install -d ${D}/usr/share/wifi/
+	    install -d ${D}/lib/firmware/rtlwifi
             install -m 0644 ${WORKDIR}/*.ko ${D}/usr/share/wifi/
 
             install -m 0777 ${WORKDIR}/wlan0_up.sh ${D}/usr/share/wifi/	    
             install -m 0777 ${WORKDIR}/wpa_supplicant.conf ${D}/usr/share/wifi/
+	    install -m 0755 ${WORKDIR}/rtl8188eufw.bin ${D}/lib/firmware/rtlwifi 
 }
